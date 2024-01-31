@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Sharp
+namespace MathFunction
 {
-    internal class Program
+    public class MathService
     {
-        static void Main(string[] args)
+        public static int add(int x, int y)
         {
+            return x + y;
         }
+   
     }
 }

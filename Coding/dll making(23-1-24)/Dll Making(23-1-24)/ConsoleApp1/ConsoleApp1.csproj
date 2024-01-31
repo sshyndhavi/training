@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7912F0AE-984C-4633-A181-11E1E63BEA64}</ProjectGuid>
+    <ProjectGuid>{40704077-071A-4773-90A7-2E2393E85F7A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>C_Sharp</RootNamespace>
-    <AssemblyName>C_Sharp</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathFunction">
+      <HintPath>..\MathFunction\bin\Debug\MathFunction.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
