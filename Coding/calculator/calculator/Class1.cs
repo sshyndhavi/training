@@ -17,7 +17,6 @@ namespace calculator
         {
             return a + b;
         }
-
         /// <summary>
         /// Subtracts one integer from another and returns the result.
         /// </summary>

@@ -33,22 +33,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Creating Employee objects
-        Employee emp1 = new Employee("John", "Doe", "123 Main St", 50000);
-        Employee emp2 = new Employee("Jane", "Smith", "456 Elm St", 60000);
-
+        // creating Employee objects 
+        Employee emp1 = new Employee("hyndu", "suri", "vsp", 35000);
         //  method to get the count of objects
-        int count = CountObjectsUsingStaticMethod();
-    
-
-        Console.WriteLine("Count of objects using static method: " + count);
-        Console.ReadLine();
         
+        int count = Employee.GetObjectCount();
+
+        Console.WriteLine("count of objects using instance method: " + count);
+            Console.ReadLine();
+        
+
     }
 
-    // Method to count objects using a static method
-    static int CountObjectsUsingStaticMethod()
-    {
-        return Employee.GetObjectCount();
-    }
 }

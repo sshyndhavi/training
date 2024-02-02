@@ -13,10 +13,11 @@ namespace Calc_implementation
             Calculator calc = new Calculator();
 
             // Call the Add method
+            #region Addition
             int sum = calc.Add(5, 3);
             Console.WriteLine("Sum: " + sum);
             Console.ReadLine();
-
+            #endregion
             // Call the Subtract method
             int difference = calc.Subtract(10, 4);
             Console.WriteLine("Difference: " + difference);
