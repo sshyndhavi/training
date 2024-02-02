@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2FAB36FB-C2F5-4209-B83A-6053CB2DDC61}</ProjectGuid>
+    <ProjectGuid>{9C0C7242-FF4E-406D-AA48-0D257E40D095}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>sparsh</RootNamespace>
-    <AssemblyName>sparsh</AssemblyName>
+    <RootNamespace>Countobjects</RootNamespace>
+    <AssemblyName>Countobjects</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44491c0529226cec, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\calculator\calculator\bin\Debug\calculator.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
