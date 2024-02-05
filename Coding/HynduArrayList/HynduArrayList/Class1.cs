@@ -39,18 +39,18 @@ public class HynduArraylist<T>
         }
     }
     public void Insertlast(int data)
-    { 
+    {
         Node obj = new Node(data);
         if (tail == null)
         {
-          head = obj;
-          tail = obj;
+            head = obj;
+            tail = obj;
         }
         else
         {
-        tail.next = obj;
-        obj.prev = tail;
-        tail = obj;
+            tail.next = obj;
+            obj.prev = tail;
+            tail = obj;
         }
 
     }
@@ -63,7 +63,7 @@ public class HynduArraylist<T>
             Console.Write(currentnode.data + " ");
             currentnode = currentnode.next;
         }
-      
+
 
     }
     public int Count()
@@ -78,7 +78,40 @@ public class HynduArraylist<T>
         }
         return count;
     }
+    public void RemoveLast( int data)
+    {
+        if (head == null)
+        {
+            Console.WriteLine("list is empty");
+            return;
+        }
+        if (head == tail)
+        {
+            head = null;
+            tail = null;
+            return;
+        }
+        tail = tail.prev;
+        tail.next = null;
 
-
-
+    }
+    public void RemoveFirst(int data)
+    {
+        if(head == null)
+        {
+            Console.WriteLine("list is empty");
+            return;
+        }
+        if (head == tail)
+        {
+            head = null;
+            tail = null;
+            return;
+        }
+        head = head.next;
+        head.prev = null;
+    }
 }
+
+
+
