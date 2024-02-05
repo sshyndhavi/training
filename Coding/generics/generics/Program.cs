@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 
 public class Pair<T>
 {
@@ -25,3 +25,4 @@ class Program
         Console.ReadLine();
     }
 }
+*/
