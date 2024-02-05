@@ -16,6 +16,8 @@ namespace UsingMyArrayList
             list.Insertfirst(30);
             list.Insertlast(50);
             list.Insertlast(5);
+            list.RemoveFirst(30);
+            list.RemoveLast(5);
 
 
             list.Print();
