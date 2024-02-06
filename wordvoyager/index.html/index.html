@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WordVoyager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-primary ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">WordVoyager</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Tutorials</a>
+              <a class="nav-link" href="#">Contact</a>
+              
+            </div>
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="login.html" class="btn btn-outline-light me-md-2">LOGIN</a>
+          </div>
+            <div class ="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="signup.html" class="btn btn-outline-light me-md-2">SIGN UP</a>
+        </div>
+        </div>
+        </nav>
+
+        
+     <section class="my-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="https://www.finoit.com/wp-content/uploads/2022/09/clean-code-java-principles.jpg">
+                    <div class="card-body">
+                      <h5 class="card-title">Java</h5>
+                      <p class="card-text">Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png" width="100%" height="200">
+                    <div class="card-body">
+                      <h5 class="card-title">Python</h5>
+                      <p class="card-text">Python is a computer programming language often used to build websites and software, automate tasks, and analyze data.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8QERAQDw4QDQ4WFxUYFg4VEBYSDg8YGBYYFxYWFRUZHCogGB0nGxgfITEhJjAtLi4uGB8zODMsNygtLisBCgoKDg0OGhAQGC0dHyYtLS4tLS8tLTAtLTArLS0tLS0vLS0tLS0tLS0tLS0rMC0tLSstKy0tLS0tLS0tKy0rLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAQIFBgcDBAj/xABFEAABAwICBgUHCgQGAwEAAAABAAIDBBEGIQUSMUFRYQciNHGBE1Jyc5GhsxQjMkJTYoKDsbJDosHRF1RjdJKTM0TCFv/EABoBAQACAwEAAAAAAAAAAAAAAAABAgMEBQb/xAAyEQACAQMBBQYFBAMBAAAAAAAAAQIDBBEhBRIxQVFhcYGxwfAiM5HR4TI0cqETYvEj/9oADAMBAAIRAxEAPwDuKIiAIiIAiIgCIiAIiIAi+DSOlIadutK8N4N2vd3N/rsWl6YxXNNdsV4IuR+dd3u3dw9pWxRtp1eGi6jBtWlMQU9OS1zjJJ9mzrOHedg8c1gZ8cSfw6djR955cfcAtSUErp07GlFarPf+C2DbIscSj6cEbh91xaffdZrReKKachpJgkP1X2DT3O2e2xXOLqpKmdjRktFjuGDtCLmGh8S1FPZt/LQ/ZuObfRdtHdmOS3rRGnYKofNvs/fE7KQeG8cwuZXtKlLXiuq9enl2kYMqiItYgIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIta0ziyGK7YbTycb/ADTe8/W7h7Qr06U6jxFZBsFRUMjaXyODGDa4mwC1DTGMSbspRb/WcM/wtP6n2LWdIaQmndrTPL+DdjG+i3YF8t11aFhGOs9X/X5LYPSaZz3F73F7ztcTcnxXmSouq3XQBN1F1UlQSgJJUEqCVCtgE3UNeQQQS1wzDgbEHiDuUEqpKkk27QuNJI7MqgZmfai3lW942O9x71u1DXRTt14ZGyN4jaORG0HkVxklfRRVssDw+GR0b+IO3kRsI5FaFfZ8J6w+F/1+PD6EYO0otM0HjeN9mVQET/tRfyR9IbW+8dy2+OQOAc0hzTmHA3BHEFcirRnSeJrBU9ERFiAREQBERAEREAREQBEXx6Q0hDA3XleGDcNrncmjaVKTbwtQfYsRpbT0FNcOdry7om5u8fNHf71q2mMWyy3bBeCPzv4rvH6vhnzWtk7zmeO8ro0dnt61NOwnBltL4gnqbhx8nF9k05H0jtd+nJYlQSouupGEYLEVhEkkqLqt1BKsCSVUlQSl1IJJUKLqCVYkm6qSqkqCVIJJVSUuougJuoJUEqLqQTdZDQ+nqikPzT+pvidnE7w3HmLLGkqpKSipLEllA6roLFtNUWY4+QnP8Nx6rj9x2w92R5LY1wUrY9BYyqKazJCamHzXH5xo+6/+hv4LlXGzOdJ+D9H9/qQ0dXRYvQ+naeqbeJ93DbGcpW97f6i45rKLkyjKL3ZLDKhERVAREQBEVJHAAkmwAuTwAQGIxFpttKwWAfK76LNw+87l+vtI53V1UkrzJK8ved5/QDcOQXppavdUTPldfM9Uea0fRHs9918l13rW3VGP+z4/b3xLE3VbpdUJW0C11UlQShKlIAlRdQoJUpEk3UEqpKqSpBYlVJUXS6kC6XUEqpKlAklRdRdQSpQJuoJUEqhKkFiVUlRdRdSCbqLqCVUlSkD2hncxzXscWPabh7TZzTyK6dg3FPyseRms2paL32NmA+sBucN48RvA5Vde1HVPhkZLGdWRhDmnmNx5HYRwJWvdWsa8MPjyfT8BrJ3tF8mjKxs8MczPovaHAbxcZg8wcvBfWvLtNPDKBERQAsTiebUpJyN7dX/kQ3+qyywuMexT/g+I1ZaCzVgu1eYOZKCVBKqSvSFiSUJUXUXUpEk3UXUEr0paWSV2pFG6V3mtF7czwHMqeGrB5EqpK2GLBlc4XLY4+TpBf+W6+SuwxWwgl0Be0fWYQ/3DP3LGq9JvCmvqiMmHJS6i6glZiSSVBKi6i6nAJuq3UErMaLwvV1LPKRxhsZ2Pe7VD/RG0jnsUTnGCzJ4XaDDkqpK+vSmjZ6d+pNGY3HMHItcOLSMiviVotSWU8oC6L2o6WSZ7Y4WGSQ7Gjb7dgHMrMVmDK6JhkMTZABctY/WeB6O/wuqyqwg0pSSz1YNfJUEqt1F1lBJKhRdQSpBJKglCVW6A610aT61CG+ZI9vts/wD+1ti0zor7HL693w41ua8tfLFxPvKBERaoCwmM+xT/AIPiMWbWExn2Kf8AB8RizW/zod680EcvuoUEqpK9KXLEqpKglVupBldAaIfWS+TadVgzfJ5o5czu8eC6jo7R8VOwRxMDG/zOPFx3lYfA1CIqVr7deUl5PK9mjusL+JWyLgXtw6lRwXBe8lWEWj6Ux6GPLaeESsBt5VzrB/ogDZz9yzeG8Qx1rTZpjlbbWjJvkdjmneP09l8U7WtCG/KOnvkMHx4rwuyoa6WFoZUDOwyE3J33uB9vLmR55HhvC7suT48oRDWPLR1ZAJLbgSSHe8E/iXQ2bcN/+Uten2+xKZgCVUlVJWy4Ywk+sb5V7/IwXIBAu+QjI6u4AHK/EHJdSpUhTjvTeESYCmYHvY07HOaDxsSAV3FjA0ANADQLADIADYAtRh6P4Gua4TzEtINrMsbG/BbkuJf3NOtu7jzjJVs1TpGha6j1iOsx7C07xc6p9x/RcrJXbdPaJbVwmB73MaS06zba3VN961r/AA4p/wDMTexn9lmsbylSpbs3rl8gmfN0WQttUyW612NB4DMkDvNvYF0BYXDmH46FsjWSPk1yCda2VhbKwWaWhd1Y1a0px4aeQZxTF8LY62qawWbr3tuGs0OPvJWGJXV9L4GhqZ5J3Tysc8gloDdUWaG5XHJa1iPAjqeJ00EpnYwXfG5oEgaNrmkZG222WQO3Yu3b39FxjBy1wlr1wlxJyaaSouq3UEroki6glCVF1bAOrdFPY5fXu+HGt0WldFHY5PXu+HGt1XlL/wDcT7ygREWoAsHjTsM/5fxGLOLBY17DP+X8RizW3zod680DlhKglRdLr0xcXUEqCVF1KB2PDnZKX1Uf7QvfShIgmIyPk35/hK+fDfY6X1Uf7QvfS3/gn9XJ+0rzE/nP+XqUOKXWewPXMhrGF7tVr2uZrE2AJsW38WgeIWvXUEr09WCnGUHz0Lne1y3pGrWSVLWMIcY2ariNgcSSW+At7VhWadrGs8mKqYM2W8obgcAdoCx5K0bWwdGpvylnp4kJEXXW8DVkclHE1hGtGC17d7Tc5nvGfiuREr1pK2WF2vDI+J/nNcWkjgbbRyK2Lu2/zw3c4ecks70i45RYmrzJEDVyEF7ARlmC4A7l2NcK5tJW+N5p56FMBFruOqyWCjfJC8xyBzAHDaLuAK5p/wDq9If5yX3f2WS2sJ14b6aWuOf2JwdtRaZ0caTnqGVBnldMWuaAXWyBBvsW5rWrUnSqOD5EBY/TVdHTwSyykBgacj9YkWDRxJOXiub4uxFWxVtRHFVSRxtc2zBawuxp4cStY0hpSoqCDPPJNbYHOJa3mG7AV0aOypTUZSksPD55JwfKNirdLqpK9CXJuoJUEqpKA610T9jl9e/4ca3ZaT0Tdjl9e/4ca3ZeUv8A9zP3yMYREWmAsFjbsM/5fxGLOrA447DP+X8VizW3zod680SjlRKrdRdRdeoRYm6glQSqEqyB2jDfY6X1Uf7QvfS3Z5/VyftK8MNdjpPUxfsC99Ldnn9XJ+0rys/nP+XqUOHEpdVus3g7RrKmqYyQa0YDnub5wbaw7rkX5XXqak1CLk+C1LmI8m7V1tVxZ59jqjx2LyJXfGRtADQAGgWDQLADhZco6QNFR01QDE0MZI3W1Bk1rrkOsNw2G3MrStb9Vp7m7h8tckZNZugBJAAJJ2AZk9wVSV1jo/0VFFSxzaoM0o1nSWztfqtB3C1vFbF1cq3hvNZ5Ik5to+im8rFeGUDXZn5N1vpDku6Ii4N3du4a+HGCrZrHSHG51DIGtc868eQBJ+mNwXJ/kE/2Ev8A1O/su/oslrfuhT3N3OuePd9hk0TosheyOp12OZd7LazS2/VPFb2iLVuK3+ao54xkg4xjajldXVJbFI5pc2zhG4g/Ns2EBa7KxzTquaWO80gh3sK/RKw+JdDxVkD45ANYAlklutG62RB/UbwunQ2qoqMJQ0SSz3aZ4FsnCSUJVda6i67+CwJUXS6qSgOu9EnYpfXu+HEt3Wj9EfYpfXu+HEt4Xk7/APcz7zHzCIi0wFgcc9gqPy/isWeWAx12Co/L+KxZrb50P5LzByYlVJUEqLr1RcEqLoSqkoDruBa0S0UQ+tHeNw4ap6v8pBWwOaCCCLg7uK4/hHEBopiXXdTvsJGjMttseBxF9m8HuXW6aoZIxskbg9jhcOBu0hecv7d0qreNJar7FWc50rgCobIfkzmPhJya5xbIzkcrEDj7lseDsLfIteSQtfUPFurfUjbe+qCczcgEnkPHakVal9WqU9yT056avvGQuSdJFcJK0sabiJjWHhrG7j+4DwW84sxLHRRkAh9S4dSPh99/Bo9+wbyOPSyuc5znEue4kucdriTck+K3dlW8suq+GMLt9++BKRUlbpg7GjKWMU9S1xiBOpI0axYCblrhvFybEcbWWkEqCV161CFaO5NaEnYYsdUDnNaJH6ziAPmn7SbDctoX58opA2SJzjZoewk8AHAkr9Brg39pC33dzOuePh2Iqz4dLaUipYjNMS2MEAkNLjcmwyCwf+IOjftZP+p/9lTpNeBQOBNi6SMAcTfWt7AT4LjxKzWNhSr0t+eeONPDsYSO86E09T1oe6nc5wYQHXYW2JFxtWVXO+iGQalW2/W1ozbkQ4A+5dEWjd0VSrShHgseSZDNc0jjOhp5XwyyPEjCA4CNzgLgOGYHArWsUdIUT4Xw0Ye57wWmZzdRsYOR1Qcy63cBe+exaljqQO0hVlpuNcC/NrWtI9oI8FgSV2rbZlDdhUeW8J4b04Z6F0iyoSoJUErr4JJJUXS6qSpB1/oi7FL693w4lvK0Xoh7FL/uH/DiW9LyG0P3M+8xsIiLTAWAx32Co/L+KxZ9YPGcRfQ1IG5od4McHH3BZrZ4rQf+y8wjj11UlQSouvWYLkkqLqFBKkE3WQ0TpyppDeCUsBzMZ60bu9pyvzGaxhKXUSipLEllA3iLpKnA69NE93FrnMHsN18ekOkGskBbGI6YcWt1pP8Ak7L3LUrqt1gjZW6eVBe+zgMHpNM57i97nPeTcvcS5zjxJOZXkShKrdbeAWuq3UXUEqSSSVtuhcf1NNG2J8bKhjRZpc4tkaBsBcL6wHdfmtQJVSVjq0adVbs45RGDMYixHUVzw6Ytaxt9SJtwxt9pzzJ5+yywxKXS6vCEYR3YrCRJ92htLz0kglhcGutYgi7Hje1w3hbRXdJlU+MtjhigeRYygl5HNrTkD33WjEqCVjqWtGrJSnFNoYLveSSSSScySbkk7STvK8yVF1F1sAm6i6glLqQCVF0uqEqQdi6H+xS/7h/w4lva0nokhLaAu3PlkcPANZ+rCt2Xj9oPNzU7zG+IREWmAvKohbIxzHC7HAtI4gixHsXqiA4RpShfTzSQP+kxxF/OG1ru4ix8V8ZK6vjXC/ytolhAFSwWtsEzduqTuPA8yDtuOUzMcxxa9pY8GxaRZzTwIOxeqtLlV4Z5rivXx4l1qVJUEqCVW62gWuqkqCUupQBKrdLqpKlIkm6glQSqkqQWJVSVBKXUgXS6qSqkqUCxKqSoJS6lIC6XVSVUlSCSUJUXUXUgm6rdQSqkqQSSrwRPkc1kbS57iGtYNrnONgB3krz/AF2W3knYAus9G+CnQEVdWzVnt81EfpQgixe/g8g2tuBN8zYa93cxtqbnLjyXV/br/wADZuugNGikpoKcEHybAC4ZBztr3eLiT4rIoi8XKTk3JvLZjCIigBERAFhNPYapawfOs1ZLWE7cpRyJ+sORus2itCcoS3ovDBxjEOEKqju+3yiAfxWA9UffZtb35jmtduv0StPxFgWmqbvgtSznO7R808/eZuPMW253Xattqr9NZY7V6r7fQtk5LdQSshpvQlTRu1Z4iwH6Mg60T/Rd/Q2PJYwldmMlJb0XlFgShKqSourgEqLqbqhKAklQSoJUXVgLqLqLqCVIJuoJQlQSpBN1W6qSoJQEkqCUuvr0Toqoq5PJU8TpXZXt9FgO9zjk0d6ltJZbwgfHdZ3DeE6yuIMUepDfOofdsY46u9x5DxIXQcMdGcEOrJWltTLt8kL/ACdnI3zk8bDkt+jYGgAANAyAAsABsAC4t1tmEfhoavq+Hgufjp3lXLoazhjBFHQ2fq/KKgf+w8C7T/pt2M/XmVtKIuBVqzqy35vLKhERYwEREAREQBERAEREB4VNOyRrmSMbIx2RY4BzXDmCuf4j6OAbyULtU7fk73dU+g47O53tC6Oiz0LmpQeYPw5Pw9snOD86VlLJC8xzRuikG1jhZ3fzHMZFfOSv0FpjQ1PVs1KiJsg3O2PYeLXDMLmGJOj2pgvJSk1UO3Ut8+weiPp/hz5L0FrtOlV+Gfwv+n4+jLJmlEqCVB3jYRkRvBG0KCV1CS11UlQSougBKXUXVSVILEqhKglQXccgpSBYlWijc9zWMa6R7jZrGtLnuPANGZK2nDOAaur1XyA0lOfruafKvH3I9v4jYZ3F11jD+GKShbaCLrkWdM7rTP73bhyFhyXPu9p0aGi+KXRcPF+iIbNAwz0YvfaSvcYm7fkzCDI703DJvcLnmCunaN0dBTxiKCJkMY+q0WF95PE8zmvsRebubyrcP43p05e+16lW8hERaxAREQBERAEREAREQBERAEREAREQBERAa3iTB9JXXc9vkZ907AA8+mNjx358CFyrEmEKyiu57PKwfbsBLB6Y2s8cuZXeVUi+RzHBb9rtGrQ0/VHo/R8vLsJTwfma6qSuy4g6OKSoJfTuNHKdzWgwOPq8tX8JA5FabV9GOkWE6nkJhuLZS0nvDgLe0rv0dpW1Rfq3X0en4LZRpZKrdblTdGek3HNsEQ4vmy/kDltegui+niIfVymrcP4YGpB+LPWf7QOIKtV2jbU1nfz2LX8fVjJzrD+GquudaCL5sGzpndWFnHrfWPJtyusYZwDSUerI8fKqgZ+Ue3qMP+mzYO83PMLa4YmsaGMa1jALBjQGtaNwAGQC9VwbvalWvmMfhj0XPvfpw7CrYREXNICIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIpAREQBERQAiIgCIiAIiIAiIgCIiAIiID//Z">
+                    <div class="card-body">
+                      <h5 class="card-title">C#</h5>
+                      <p class="card-text">C# is a modern, object-oriented, and type-safe programming language.</p>
+                    </div>
+                  </div>
+                </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+     </section>
+  </body>
+</html>
