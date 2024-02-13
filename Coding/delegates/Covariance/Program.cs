@@ -3,6 +3,13 @@ namespace Covariance
 {
     // Define a delegate with a return type of Animal
     public delegate Animal AnimalDelegate();
+    public class Animal
+    {
+        public static Animal GetDog()
+        {
+
+        }
+    }
 
     // Derived class
     public class Dog : Animal { }
@@ -10,7 +17,7 @@ namespace Covariance
     class Program
     {
 
-        static Dog GetDog() => new Dog();
+        public static Dog GetDog() => new Dog();
 
         static void Main(string[] args)
         {
