@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name=" viewport" content=" width = device-width,initial-scale = 1.0">
+    <title>Edit form</title>
+</head>
+<body>
+    <h2>Edit</h2>
+    <form id="form" method="post" action="@Url.Action("UpdateArticle")">
+        <label for="ArticleId">ArticleId</label>
+        <input type="number" id="ArticleId" name="ArticleId" /><br />
+        <label for="Title">Title</label><br />
+        <input type="text" id="Title" name="Title" /><br />
+        <label for="Content">Content</label><br />
+        <textarea name="content" rows="3" columns="10"></textarea><br />
+        <label for="PublishedDate">PublishedDate</label><br />
+        <input type="date" id="PublishedDate" name="PublishedDate" /><br />
+        <label for="LastModifiedDate">LastModifiedDate</label><br />
+        <input type="date" id="LastModifiedDate" name="LastModifiedDate" /><br />
+        <label for="AuthorId">AuthorId</label><br />
+        <input type="number" id=" AuthorId" name="AuthorId" /><br />
+        <label for="CategoryId">CategoryId</label><br />
+        <input type="number" id="CategoryId" name="CategoryId" /><br />
+
+
+
+
+
+        <input type="submit" value="Submit" name="action" />
+    </form>
+</body>
+
+</html>
+
+

@@ -1,0 +1,69 @@
+﻿@using System.Data
+@using System.Data.SqlClient
+@model System.Data.DataTable
+@{
+    ViewBag.Title = "Home";
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Aricles</title>
+</head>
+
+<body>
+    <h2>Listing all Articles</h2>
+    <div class="container bg-light p-4 my-4">
+
+        @{ 
+
+            if (Model.Rows.Count > 0)
+            {
+
+                <table id="myTable" class="table table-bordered table-hover table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">ArticleId</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Content</th>
+                            <th scope="col">Published Date</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (DataRow dr in Model.Rows)
+                        {
+                            <tr>
+                                <td>@dr["ArticleId"].ToString() </td>
+                                <td>@dr["Title"].ToString() </td>
+                                <td>@Html.Raw(dr["Content"].ToString().Length > 20 ? dr["Content"].ToString().Substring(0, 20) + "..." : dr["Content"].ToString()) </td>
+                                <td>@dr["PublishedDate"].ToString() </td>
+                                <td>@Html.ActionLink("Edit ", "Edit", new { ArticleId = dr["ArticleId"].ToString() })</td>
+                                <td>@Html.ActionLink("| Delete", "Delete", new { ArticleId = dr["ArticleId"].ToString() })</td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No Data</p>
+                }
+            }
+
+
+            @Html.ActionLink("Create", "Create", null, new { @class = "btn btn-primary" })
+            
+
+
+        
+    </div>
+      
+</body>
+
+</html>
+

@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name=" viewport" content=" width = device-width,initial-scale = 1.0">
+    <title>Create form</title>
+</head>
+<body>
+    <h2>Create</h2>
+    <form id="form" method="post" action="@Url.Action("InsertArticle")">
+        <label for="Title">Title</label><br />
+                                        <select id="Title" name="Title">
+                                            <option value="Technology">Technology</option>
+                                            <option value="Health">Health</option>
+                                            <option value="Motivation">Motivation</option>
+                                            
+                                        </select>
+        <label for="Content">Content</label><br />
+        <textarea name="content" rows="3" columns="10"></textarea><br />
+        <label for="PublishedDate">PublishedDate</label><br />
+        <input type="date" id="PublishedDate" name="PublishedDate" /><br />
+        <label for="LastModifiedDate">LastModifiedDate</label><br />
+        <input type="date" id="LastModifiedDate" name="LastModifiedDate" /><br />
+        <label for="AuthorId">AuthorId</label><br />
+        <input type="radio" id=" AuthorId" name="AuthorId" value="1" />1<br />
+        <input type="radio" id=" AuthorId" name="AuthorId" value="2" />2<br />
+
+        <label for="CategoryId">CategoryId</label><br />
+        <input type="checkbox" id="option1" name="option1" value="Option 1">
+        <label for="option1"> 1</label><br>
+        <input type="checkbox" id="option2" name="option2" value="Option 2">
+        <label for="option1"> 2</label><br>
+
+
+
+
+
+
+
+        <input type="submit" value="Submit" name="action" />
+    </form>
+</body>
+
+</html>
