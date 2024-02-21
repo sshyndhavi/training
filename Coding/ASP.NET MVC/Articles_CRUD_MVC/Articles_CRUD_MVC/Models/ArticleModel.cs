@@ -64,7 +64,7 @@ namespace Articles_CRUD_MVC.Models
                     con.Open();
                     string query = "Update Article SET Title = @Title , Content =@Content where ArticleId = @ArticleId ";
                     SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@articleid", articleid);
+                    cmd.Parameters.AddWithValue("@articleid",);
                     cmd.Parameters.AddWithValue("@title",title );
                     cmd.Parameters.AddWithValue("@content",content );
                     

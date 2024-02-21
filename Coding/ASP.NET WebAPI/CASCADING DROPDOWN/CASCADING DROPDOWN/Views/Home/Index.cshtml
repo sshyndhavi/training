@@ -1,0 +1,33 @@
+﻿@model  CASCADING_DROPDOWN.Models.Countrystate_cityviewmodel
+<br />
+<br />
+<div class="container">
+    <div class="form-group">
+        @if (ViewBag.CountryList != null)
+        {
+            @Html.DropDownListFor(model => model.CountryID, ViewBag.CountryList as SelectList, "select country", new { @class = "form-control" })
+        }
+    </div>
+    <div class="form-group">
+        @Html.DropDownListFor(model => model.STATEID, ViewBag.StateList as SelectList, "select state", new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.DropDownListFor(model => model.CITYID, ViewBag.CityList as SelectList, "select City", new { @class = "form-control" })
+
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function)(){
+        $("CountryID").change(function () {
+            $.get("/Home/GetStateList"), { CountryID: $("#CountryID").val() }, function (data) { 
+                $("#STATEID").empty();
+                $.each(data, function (index, row) {
+                    $("#STATEId").append("<option value= "+row.STATEID+">"+row.STATENAME+""</option>"")
+                }
+
+           });
+        })
+    });
+</script>

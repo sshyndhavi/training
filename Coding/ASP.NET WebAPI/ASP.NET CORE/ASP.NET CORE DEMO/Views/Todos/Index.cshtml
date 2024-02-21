@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@model List<TodoItem>
+
+<h2>Todo List</h2>
+
+<form asp-action="Add">
+    <input type="text" name="title" placeholder="Enter todo item" />
+    <button type="submit">Add</button>
+</form>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @Html.DisplayFor(modelItem => item.Title)
+        </li>
+    }
+</ul>
+
+

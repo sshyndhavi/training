@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WordVoyager_MVCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CITY">
+          <Key>
+            <PropertyRef Name="CITYID" />
+          </Key>
+          <Property Name="CITYID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CITYNAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="STATEIDCOLUMN" Type="int" />
+        </EntityType>
+        <EntityType Name="COUNTRY">
+          <Key>
+            <PropertyRef Name="COUNTRYID" />
+          </Key>
+          <Property Name="COUNTRYID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COUNTRYNAME" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="STATES">
+          <Key>
+            <PropertyRef Name="STATEID" />
+          </Key>
+          <Property Name="STATEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="STATENAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="COUNTRYIDCOLUMN" Type="int" />
+        </EntityType>
+        <Association Name="FK__CITY__STATEIDCOL__66603565">
+          <End Role="STATES" Type="Self.STATES" Multiplicity="0..1" />
+          <End Role="CITY" Type="Self.CITY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STATES">
+              <PropertyRef Name="STATEID" />
+            </Principal>
+            <Dependent Role="CITY">
+              <PropertyRef Name="STATEIDCOLUMN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__STATES__COUNTRYI__60A75C0F">
+          <End Role="COUNTRY" Type="Self.COUNTRY" Multiplicity="0..1" />
+          <End Role="STATES" Type="Self.STATES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COUNTRY">
+              <PropertyRef Name="COUNTRYID" />
+            </Principal>
+            <Dependent Role="STATES">
+              <PropertyRef Name="COUNTRYIDCOLUMN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WordVoyager_MVCModelStoreContainer">
+          <EntitySet Name="CITY" EntityType="Self.CITY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COUNTRY" EntityType="Self.COUNTRY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="STATES" EntityType="Self.STATES" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CITY__STATEIDCOL__66603565" Association="Self.FK__CITY__STATEIDCOL__66603565">
+            <End Role="STATES" EntitySet="STATES" />
+            <End Role="CITY" EntitySet="CITY" />
+          </AssociationSet>
+          <AssociationSet Name="FK__STATES__COUNTRYI__60A75C0F" Association="Self.FK__STATES__COUNTRYI__60A75C0F">
+            <End Role="COUNTRY" EntitySet="COUNTRY" />
+            <End Role="STATES" EntitySet="STATES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WordVoyager_MVCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CITY">
+          <Key>
+            <PropertyRef Name="CITYID" />
+          </Key>
+          <Property Name="CITYID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CITYNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATEIDCOLUMN" Type="Int32" />
+          <NavigationProperty Name="STATE" Relationship="Self.FK__CITY__STATEIDCOL__66603565" FromRole="CITY" ToRole="STATES" />
+        </EntityType>
+        <EntityType Name="COUNTRY">
+          <Key>
+            <PropertyRef Name="COUNTRYID" />
+          </Key>
+          <Property Name="COUNTRYID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COUNTRYNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="STATES" Relationship="Self.FK__STATES__COUNTRYI__60A75C0F" FromRole="COUNTRY" ToRole="STATES" />
+        </EntityType>
+        <EntityType Name="STATE">
+          <Key>
+            <PropertyRef Name="STATEID" />
+          </Key>
+          <Property Name="STATEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="STATENAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COUNTRYIDCOLUMN" Type="Int32" />
+          <NavigationProperty Name="CITies" Relationship="Self.FK__CITY__STATEIDCOL__66603565" FromRole="STATES" ToRole="CITY" />
+          <NavigationProperty Name="COUNTRY" Relationship="Self.FK__STATES__COUNTRYI__60A75C0F" FromRole="STATES" ToRole="COUNTRY" />
+        </EntityType>
+        <Association Name="FK__CITY__STATEIDCOL__66603565">
+          <End Role="STATES" Type="Self.STATE" Multiplicity="0..1" />
+          <End Role="CITY" Type="Self.CITY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STATES">
+              <PropertyRef Name="STATEID" />
+            </Principal>
+            <Dependent Role="CITY">
+              <PropertyRef Name="STATEIDCOLUMN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__STATES__COUNTRYI__60A75C0F">
+          <End Role="COUNTRY" Type="Self.COUNTRY" Multiplicity="0..1" />
+          <End Role="STATES" Type="Self.STATE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COUNTRY">
+              <PropertyRef Name="COUNTRYID" />
+            </Principal>
+            <Dependent Role="STATES">
+              <PropertyRef Name="COUNTRYIDCOLUMN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WordVoyager_MVCEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CITies" EntityType="Self.CITY" />
+          <EntitySet Name="COUNTRies" EntityType="Self.COUNTRY" />
+          <EntitySet Name="STATES" EntityType="Self.STATE" />
+          <AssociationSet Name="FK__CITY__STATEIDCOL__66603565" Association="Self.FK__CITY__STATEIDCOL__66603565">
+            <End Role="STATES" EntitySet="STATES" />
+            <End Role="CITY" EntitySet="CITies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__STATES__COUNTRYI__60A75C0F" Association="Self.FK__STATES__COUNTRYI__60A75C0F">
+            <End Role="COUNTRY" EntitySet="COUNTRies" />
+            <End Role="STATES" EntitySet="STATES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WordVoyager_MVCModelStoreContainer" CdmEntityContainer="WordVoyager_MVCEntities1">
+          <EntitySetMapping Name="CITies">
+            <EntityTypeMapping TypeName="WordVoyager_MVCModel.CITY">
+              <MappingFragment StoreEntitySet="CITY">
+                <ScalarProperty Name="CITYID" ColumnName="CITYID" />
+                <ScalarProperty Name="CITYNAME" ColumnName="CITYNAME" />
+                <ScalarProperty Name="STATEIDCOLUMN" ColumnName="STATEIDCOLUMN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COUNTRies">
+            <EntityTypeMapping TypeName="WordVoyager_MVCModel.COUNTRY">
+              <MappingFragment StoreEntitySet="COUNTRY">
+                <ScalarProperty Name="COUNTRYID" ColumnName="COUNTRYID" />
+                <ScalarProperty Name="COUNTRYNAME" ColumnName="COUNTRYNAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STATES">
+            <EntityTypeMapping TypeName="WordVoyager_MVCModel.STATE">
+              <MappingFragment StoreEntitySet="STATES">
+                <ScalarProperty Name="STATEID" ColumnName="STATEID" />
+                <ScalarProperty Name="STATENAME" ColumnName="STATENAME" />
+                <ScalarProperty Name="COUNTRYIDCOLUMN" ColumnName="COUNTRYIDCOLUMN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
